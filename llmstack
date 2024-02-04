@@ -1,0 +1,10 @@
+# Create a virtual environment 
+python -m venv llmstack
+
+# Activate the virtual environment
+
+# macOS and Linux
+source llmstack/bin/activate
+
+#install llmstack
+pip install llmstack

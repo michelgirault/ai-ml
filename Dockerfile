@@ -17,4 +17,4 @@ RUN pip install --no-input --ignore-installed flask
 
 #RUN pip install -r requirements.txt
 
-#CMD ["python", "app.py"]
+CMD ["bash", "llmstack"]
