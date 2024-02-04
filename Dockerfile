@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow
 #update packages
-RUN apt update
-RUN apt upgrade
+RUN apt -y update
+RUN apt -y upgrade
 #install ml and ai packages
 RUN pip install keras
 RUN pip install flask
