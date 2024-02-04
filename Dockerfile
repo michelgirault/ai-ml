@@ -2,12 +2,14 @@ FROM tensorflow/tensorflow
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
+#install git
+RUN apt install git
 #update pip
 RUN python3 -m pip install --upgrade pip
 
 #install ml and ai packages
 RUN pip install --no-input keras
-RUN pip install --no-input flask
+RUN pip install --no-input --ignore-installed flask
 
 
 #COPY . /app
