@@ -3,7 +3,7 @@ FROM tensorflow/tensorflow
 RUN apt -y update
 RUN apt -y upgrade
 #install git
-RUN apt install git
+RUN apt -y install git
 #update pip
 RUN python3 -m pip install --upgrade pip
 
