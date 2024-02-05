@@ -17,7 +17,7 @@ WORKDIR /app
 
 #check if folder is correct
 RUN ls -la
-RUN PWD
+RUN pwd
 RUN ls -la /app
 
 #RUN pip install -r requirements.txt
