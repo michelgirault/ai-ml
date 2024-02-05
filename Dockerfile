@@ -12,7 +12,7 @@ RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
 
 
-COPY . /app
+COPY app /app
 WORKDIR /app
 
 #check if folder is correct
