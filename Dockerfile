@@ -12,8 +12,8 @@ RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
 
 
-#COPY . /app
-#WORKDIR /app
+COPY . /app
+WORKDIR /app
 
 #RUN pip install -r requirements.txt
 
