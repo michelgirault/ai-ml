@@ -1,6 +1,8 @@
 #fix permission
 chmod +wx /app
 
+ls -la /app
+
 # Create a virtual environment 
 python -m venv llmstack
 
@@ -10,3 +12,6 @@ source llmstack/bin/activate
 
 #install llmstack
 pip install llmstack
+
+#start services
+llmstack
