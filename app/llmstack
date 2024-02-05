@@ -14,4 +14,4 @@ ls -la /app
 pip install --no-input llmstack
 
 #start services
-llmstack
+llmstack --no-input
