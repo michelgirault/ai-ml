@@ -24,4 +24,6 @@ RUN ls -la /app
 
 RUN pip install --no-input llmstack
 
-ENTRYPOINT ["llmstack", "--no-input"]
+RUN chmod +x /app/llmstack
+
+ENTRYPOINT [ "/app/llmstack" ]
