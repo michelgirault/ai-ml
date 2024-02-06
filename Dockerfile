@@ -15,11 +15,6 @@ RUN pip install --no-input --ignore-installed flask
 COPY app /app
 WORKDIR /app
 
-#check if folder is correct
-RUN ls -la
-RUN pwd
-RUN ls -la /app
-
 #RUN pip install -r requirements.txt
 
 RUN pip install --no-input llmstack

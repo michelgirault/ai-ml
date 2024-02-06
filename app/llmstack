@@ -1,3 +1,5 @@
 #!/bin/bash
-start initial setup llmstack
+#copy config file
+mv config ~/.llmstack
+#start initial setup llmstack
 llmstack --no-interaction
