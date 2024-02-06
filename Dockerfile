@@ -22,4 +22,6 @@ RUN ls -la /app
 
 #RUN pip install -r requirements.txt
 
-CMD ["bash", "llmstack"]
+RUN pip install --no-input llmstack
+
+ENTRYPOINT ["llmstack", "--no-input"]
