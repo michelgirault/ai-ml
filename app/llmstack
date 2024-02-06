@@ -1,1 +1,3 @@
-llmstack --no-input
+#!/bin/bash
+start initial setup llmstack
+llmstack --no-interaction
