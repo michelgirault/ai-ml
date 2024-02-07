@@ -12,7 +12,7 @@ RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
 
 #install fix dependcies
-RUN apt-get update && apt-get install libgl1
+RUN apt-get -y update && apt-get -y install libgl1
 
 
 COPY app /app
