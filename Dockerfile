@@ -24,7 +24,8 @@ RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 RUN pip install --no-input llmstack
 
 RUN chmod +x /app/llmstack
-RUN ls -lw /app
+
+RUN /bin/bash -c 'ls -lw'
 
 RUN /bin/bash -c '/app/llmstack'
 
