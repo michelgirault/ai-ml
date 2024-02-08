@@ -18,10 +18,13 @@ RUN apt-get -y update && apt-get -y install libgl1
 COPY app /app
 WORKDIR /app
 
-#RUN pip install -r requirements.txt
+#install addition packages
+RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 
 RUN pip install --no-input llmstack
 
 RUN chmod +x /app/llmstack
 
-ENTRYPOINT [ "/app/llmstack" ]
+RUN /bin/bash -c '/app/llmstack'
+
+#ENTRYPOINT [ "/app/llmstack" ]
