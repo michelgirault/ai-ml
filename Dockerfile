@@ -26,6 +26,6 @@ RUN pip install --no-input llmstack
 USER root
 RUN chmod +x /app/llmstack
 
-RUN /bin/bash -c '/app/llmstack'
+RUN /bin/bash -c '/app/llmstack’'
 
 #ENTRYPOINT [ "/app/llmstack" ]
