@@ -25,7 +25,7 @@ RUN pip install --no-input llmstack
 
 RUN chmod +x /app/llmstack
 
-RUN /bin/bash -c 'ls -lw'
+RUN /bin/bash -c 'ls'
 
 RUN /bin/bash -c '/app/llmstack'
 
