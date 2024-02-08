@@ -1,4 +1,3 @@
-#!/bin/bash
 #list folder
 ls /app/
 #create file in root
