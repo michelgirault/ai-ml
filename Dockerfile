@@ -23,9 +23,9 @@ RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 
 RUN pip install --no-input llmstack
 
-USER root
+
 RUN chmod +x /app/llmstack
 
 #RUN ["/app/llmstack"]
-
+USER root
 ENTRYPOINT [ "/app/llmstack" ]
