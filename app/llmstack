@@ -2,7 +2,8 @@
 #list folder
 ls -l /app/
 #create file in root
-#mkdir ~/.llmstack/
+mkdir ~/.llmstack/
+ls -l /app/.llmstack/
 #copy config file
 #mv /app/config ~/.llmstack/config
 #start initial setup llmstack
