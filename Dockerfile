@@ -29,4 +29,4 @@ RUN chmod +x /app/llmstack
 #RUN ["/app/llmstack"]
 USER root
 ENTRYPOINT [ "/app/llmstack" ]
-CMD [ "/bin/bash", "-c" "/usr/local/bin/llmstack" ]
+CMD [ "/bin/bash", "-c", "/usr/local/bin/llmstack" ]
