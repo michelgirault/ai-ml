@@ -8,4 +8,4 @@ ls -l ~/.llmstack/
 mv /app/config ~/.llmstack/config
 #start initial setup llmstack
 ls -l /usr/local/bin
-/usr/local/bin/llmstack
+#/usr/local/bin/llmstack
