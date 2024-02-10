@@ -6,6 +6,5 @@ mkdir ~/.llmstack/
 ls -l ~/.llmstack/
 #copy config file
 mv /app/config ~/.llmstack/config
-cat ~/.llmstack/config
 #start initial setup llmstack
-#exec llmstack
+/usr/local/bin/llmstack
