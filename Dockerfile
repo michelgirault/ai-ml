@@ -21,5 +21,5 @@ RUN pip install --no-input llmstack
 #switch to root user to execute the script
 USER root
 #run script
-RUN /app/llmstack
+#RUN /app/llmstack
 RUN RUN  /bin/bash -c "/app/llmstack"
