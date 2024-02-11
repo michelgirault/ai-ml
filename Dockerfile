@@ -24,3 +24,6 @@ USER root
 RUN chmod +x /app/llmstack
 #RUN /app/llmstack
 RUN /bin/bash -c "/app/llmstack"
+
+# Set the default CMD to print the usage of the language image
+CMD llmstack
