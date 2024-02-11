@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow
+FROM paperspace/gradient-base
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
