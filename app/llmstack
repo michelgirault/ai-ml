@@ -3,6 +3,8 @@
 chmod +x /app/llmstack
 #create file in root folder
 mkdir ~/.llmstack/
+chmod -R +rwx ~/.llmstack/
+chown root:root ~/.llmstack/
 #copy config file
 mv /app/config ~/.llmstack/config
 #start initial setup llmstack
