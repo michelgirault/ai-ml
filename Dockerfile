@@ -1,4 +1,4 @@
-FROM paperspace/gradient-base
+FROM paperspace/gradient-base:pt211-tf215-cudatk120-py311-20240202
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
