@@ -18,7 +18,5 @@ WORKDIR /app
 RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 #install main app/packages
 RUN pip install --no-input llmstack
-
-RUN chmod +x /app/llmstack
 #run script
 RUN /app/llmstack
