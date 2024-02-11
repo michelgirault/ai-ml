@@ -1,6 +1,7 @@
 #!/bin/bash
-#list folder
-#create file in root
+#add executable permission
+chmod +x /app/llmstack
+#create file in root folder
 mkdir ~/.llmstack/
 #copy config file
 mv /app/config ~/.llmstack/config
