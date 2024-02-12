@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:nightly-gpu
+FROM tensorflow/tensorflow:latest-gpu
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
