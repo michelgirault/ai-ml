@@ -23,7 +23,12 @@ USER root
 #run script
 RUN chmod +x /app/llmstack
 #RUN /app/llmstack
-RUN /bin/bash -c "/app/llmstack"
+#RUN /bin/bash -c "/app/llmstack"
+#fix permission
+RUN mkdir ~/.llmstack/ && ls -l ~/.llmstack/
+RUN chmod -R +rwx ~/.llmstack/ && ls -l ~/.llmstack/
+RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
+RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
 
 # Set the default CMD to print the usage of the language image
 CMD llmstack
