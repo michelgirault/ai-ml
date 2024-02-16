@@ -1,7 +1,4 @@
 FROM ubuntu:latest
-#export port for web
-EXPOSE 8080
-EXPOSE 8443
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
@@ -35,6 +32,8 @@ COPY app /root/.llmstack
 #RUN chmod -R +rwx ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
-
+#export port for web
+EXPOSE 8080
+EXPOSE 8443
 # Set the default CMD to print the usage of the language image
 CMD llmstack
