@@ -33,7 +33,6 @@ COPY app /root/.llmstack
 #RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
 #export port for web
-EXPOSE 8080
-EXPOSE 8443
+EXPOSE 3000
 # Set the default CMD to print the usage of the language image
 CMD llmstack
