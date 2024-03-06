@@ -22,6 +22,9 @@ RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 RUN apt-get -y install ffmpeg libavcodec-extra
 #install main app/packages
 RUN pip install --no-input llmstack
+#last update and upgrade
+RUN apt -y update
+RUN apt -y upgrade
 #switch to root user to execute the script
 USER root
 #run script
