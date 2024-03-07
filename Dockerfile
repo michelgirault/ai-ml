@@ -20,6 +20,8 @@ WORKDIR /app
 RUN pip install --no-input h5py pip install typing-extensions pip install wheel
 #add ffmeg
 RUN apt-get -y install ffmpeg libavcodec-extra
+#install playwright dependencies
+RUN playwright install-deps  
 #install main app/packages
 RUN pip install --no-input llmstack
 #last update and upgrade
