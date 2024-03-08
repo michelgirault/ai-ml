@@ -18,6 +18,8 @@ COPY app /app
 WORKDIR /app
 #install addition packages
 RUN pip install --no-input h5py pip install typing-extensions pip install wheel
+#install pip docker
+RUN pip install --no-input docker
 #add ffmeg
 RUN apt-get -y install ffmpeg libavcodec-extra
 #install playwright dependencies
