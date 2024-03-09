@@ -36,8 +36,6 @@ USER root
 #fix permission
 RUN mkdir /root/.llmstack/
 COPY app /root/.llmstack
-#check docker
-RUN service docker status
 #RUN chmod -R +rwx ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
