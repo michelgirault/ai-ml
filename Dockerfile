@@ -23,7 +23,8 @@ RUN pip install --no-input docker
 #add ffmeg
 RUN apt-get -y install ffmpeg libavcodec-extra
 #install playwright & dependencies
-RUN apt-get -y install libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libatspi2.0-0 libxcomposite1 libxdamage1         
+RUN apt-get -y install libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libatspi2.0-0 libxcomposite1 libxdamage1
+RUN playwright install-deps         
 #install main app/packages
 RUN pip install --no-input llmstack
 #last update and upgrade
@@ -42,4 +43,4 @@ COPY app /root/.llmstack
 #export port for web
 EXPOSE 8080
 # Set the default CMD to print the usage of the language image
-CMD llmstack
+# CMD llmstack
