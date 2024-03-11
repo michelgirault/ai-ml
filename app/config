@@ -2,7 +2,7 @@ generatedfiles_root = "./generatedfiles"
 use_remote_job_queue = true
 
 [llmstack]
-llmstack_port = 8080
+llmstack_port = 0:8080
 default_openai_api_key = ""
 default_dreamstudio_api_key = ""
 default_azure_openai_api_key = ""
@@ -18,7 +18,8 @@ database_engine = "sqlite3"
 debug = "True"
 playwright_url = ""
 generatedfiles_root = "./generated_files"
-site_url = "http://llmstack.creapics.net:8080"
+site_url = "http://0.0.0.0:8080"
+allowed_hosts = "0.0.0.0,localhost,199.247.19.249,199.247.4.233,45.76.92.183"
 secret_key = "oZhA6VuszMNHqaVODZegkX5__b-Y-teew30TGr4SA1k"
 cipher_key_salt = "hRMOJJAtIE8w5sFucuv6qDr04H4YjzHw-PsQcuHJqm4"
 database_password = "_B0GI8W2NsiSII3uZ0ZAKOr_6kFvHbovvBomyt639sM"
