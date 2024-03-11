@@ -43,4 +43,4 @@ COPY app /root/.llmstack
 #export port for web
 EXPOSE 8080
 # Set the default CMD to print the usage of the language image
-CMD llmstack
+CMD llmstack --host llmstack.creapics.net--port 8080
