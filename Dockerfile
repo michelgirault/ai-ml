@@ -19,7 +19,7 @@ RUN dpkg -i ./containerd.io_1.6.28-1_amd64.deb \
   ./docker-ce_24.0.4-1~ubuntu.22.04~jammy_amd64.deb \
   ./docker-ce-cli_24.0.4-1~ubuntu.22.04~jammy_amd64.deb \
   ./docker-buildx-plugin_0.11.2-1~ubuntu.22.04~jammy_amd64.deb \
-  ./docker-compose-plugin_2.20.2-1~ubuntu.22.04~jammy_amd64.deb
+  ./docker-compose-plugin_2.20.2-1~ubuntu.22.04~jammy_amd64.deb -y -f
 RUN service docker start
 RUN docker run hello-world
 #install ml and ai packages
