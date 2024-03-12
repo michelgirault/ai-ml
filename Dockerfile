@@ -4,9 +4,21 @@ RUN apt -y update
 RUN apt -y upgrade
 #install git
 RUN apt -y install git
+#install python and pip
 RUN apt install python3 python3-pip -y
 #update pip
 RUN python3 -m pip install --upgrade pip
+#install docker
+RUN apt -y install ca-certificates curl
+RUN install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+RUN chmod a+r /etc/apt/keyrings/docker.asc
+#add repo for docker install
+RUN echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  tee /etc/apt/sources.list.d/docker.list > /dev/null
+RUN apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+RUN apt -y update
 #install ml and ai packages
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
