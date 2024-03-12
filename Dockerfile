@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt -y update
 RUN apt -y upgrade
 #install git
-RUN apt -y install git
+RUN apt -y install git wget
 #install python and pip
 RUN apt install python3 python3-pip -y  
 #update pip
