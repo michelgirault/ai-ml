@@ -15,7 +15,7 @@ RUN wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/
     https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_24.0.4-1~ubuntu.22.04~jammy_amd64.deb \
     https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-buildx-plugin_0.11.2-1~ubuntu.22.04~jammy_amd64.deb \
     https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-compose-plugin_2.20.2-1~ubuntu.22.04~jammy_amd64.deb
-RUN dpkg -y -f -i ./containerd.io_1.6.28-1_amd64.deb \
+RUN dpkg --force-confold -i ./containerd.io_1.6.28-1_amd64.deb \
   ./docker-ce_24.0.4-1~ubuntu.22.04~jammy_amd64.deb \
   ./docker-ce-cli_24.0.4-1~ubuntu.22.04~jammy_amd64.deb \
   ./docker-buildx-plugin_0.11.2-1~ubuntu.22.04~jammy_amd64.deb \
