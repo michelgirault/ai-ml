@@ -27,7 +27,7 @@ RUN systemctl enable docker.service
 RUN systemctl enable containerd.service
 # RUN systemctl start docker
 #test if docker run
-# RUN docker images
+RUN docker
 #install ml and ai packages
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
