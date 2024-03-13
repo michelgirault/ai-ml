@@ -1,4 +1,6 @@
 FROM ubuntu:latest
+#switch to root
+USER root
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
