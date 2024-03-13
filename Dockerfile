@@ -26,8 +26,7 @@ RUN dpkg --force-confold -i ./containerd.io_1.6.28-1_amd64.deb \
 RUN systemctl enable docker.service
 RUN systemctl enable containerd.service
 # RUN systemctl start docker
-#test if docker run
-RUN docker
+RUN service docker start
 #install ml and ai packages
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
