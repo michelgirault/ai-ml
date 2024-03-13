@@ -21,7 +21,8 @@ RUN dpkg --force-confold -i ./containerd.io_1.6.28-1_amd64.deb \
   ./docker-buildx-plugin_0.11.2-1~ubuntu.22.04~jammy_amd64.deb \
   ./docker-compose-plugin_2.20.2-1~ubuntu.22.04~jammy_amd64.deb 
 #start docker service
-RUN service docker start
+RUN systemctl enable docker.service
+RUN systemctl enable containerd.service
 #test if docker run
 RUN docker images
 #install ml and ai packages
