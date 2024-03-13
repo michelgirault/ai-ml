@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-#switch to root
-USER root
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
@@ -25,8 +23,6 @@ RUN dpkg --force-confold -i ./containerd.io_1.6.28-1_amd64.deb \
 #start docker service
 RUN systemctl enable docker.service
 RUN systemctl enable containerd.service
-# RUN systemctl start docker
-RUN service docker start
 #install ml and ai packages
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
@@ -52,17 +48,13 @@ RUN apt -y update
 RUN apt -y upgrade
 #switch to root user to execute the script
 USER root
-#run script
-#RUN chmod +x /app/llmstack
 #fix permission
 RUN mkdir /root/.llmstack/
 COPY app /root/.llmstack
-#RUN chmod -R +rwx ~/.llmstack/ && ls -l ~/.llmstack/
-#RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
-#RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
-#export port for web
+#start docker service
 RUN service docker start
-RUN dockerd
+#RUN dockerd
+#export port for web
 EXPOSE 8081
 # Set the default CMD to print the usage of the language image
 CMD llmstack
