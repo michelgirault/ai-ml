@@ -7,7 +7,7 @@ RUN apt -y upgrade
 #install git
 RUN apt -y install git wget libdevmapper-dev iptables systemctl
 #install python and pip
-RUN apt install python3 python3-pip -y  
+RUN apt -y install python3 python3-pip
 #update pip
 RUN python3 -m pip install --upgrade pip
 #install docker
