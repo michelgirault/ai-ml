@@ -61,6 +61,8 @@ COPY app /root/.llmstack
 #RUN chown -R root:root ~/.llmstack/ && ls -l ~/.llmstack/
 #RUN cp /app/config ~/.llmstack/config && ls -l ~/.llmstack/
 #export port for web
+RUN service docker start
+RUN dockerd
 EXPOSE 8081
 # Set the default CMD to print the usage of the language image
 CMD llmstack
