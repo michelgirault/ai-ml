@@ -56,6 +56,6 @@ RUN service docker start
 #RUN dockerd
 #export port for web
 EXPOSE 8081
-ENTRYPOINT ["./llmstack"]
+#ENTRYPOINT ["./llmstack"]
 # Set the default CMD to print the usage of the language image
-CMD llmstack
+CMD ./llmstack
