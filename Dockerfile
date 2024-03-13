@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt -y update
 RUN apt -y upgrade
 #install git
-RUN apt -y install git wget
+RUN apt -y install git wget libdevmapper-dev
 #install python and pip
 RUN apt install python3 python3-pip -y  
 #update pip
@@ -26,8 +26,8 @@ RUN docker run hello-world
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
 #install fix dependcies
-RUN apt-get -y update && apt-get -y install libgl1
-RUN apt-get -y install libglib2.0-0
+RUN apt-get -y update 
+RUN apt-get -y install libglib2.0-0 libgl1
 #copy folder with script
 COPY app /app
 WORKDIR /app
