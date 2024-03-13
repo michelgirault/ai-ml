@@ -1,12 +1,5 @@
 #!/bin/bash
-#add executable permission
-chmod +x /app/llmstack
-#create file in root folder
-mkdir ~/.llmstack/
-chmod -R +rwx ~/.llmstack/
-chown -R root:root ~/.llmstack/
-#copy config file
-mv /app/config ~/.llmstack/config
-#start initial setup llmstack
-#/usr/local/bin/llmstack
-#exec "$@"
+service docker start
+dockerd&
+llmstack
+exec "$@"
