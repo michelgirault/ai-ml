@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-#export port for web
-EXPOSE 8081
 #env delcaration sample
 ENV EXPOSE_PORT=8081 \
     PHP_SHORT_VER=82 
@@ -60,6 +58,8 @@ RUN service docker start
 #ENTRYPOINT ["./llmstack"]
 RUN chmod +x /app/llmstack
 #run and fix permission
+#expose port for web
+EXPOSE 8081
 # RUN /app/llmstack
 # Set the default CMD to print the usage of the language image
 CMD /app/llmstack
