@@ -60,5 +60,5 @@ RUN chmod +x /app/llmstack
 #expose port for web
 EXPOSE 8081
 # start the service 
-ENTRYPOINT ["/app/llmstack"]
-#CMD /app/llmstack
+#ENTRYPOINT ["/app/llmstack"]
+CMD /app/llmstack
