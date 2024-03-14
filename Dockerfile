@@ -58,4 +58,4 @@ RUN chmod +x /app/llmstack
 EXPOSE 8081
 # start the service 
 RUN ls && pwd
-CMD /app/llmstack
+CMD bash /app/llmstack
