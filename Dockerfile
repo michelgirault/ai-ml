@@ -53,12 +53,9 @@ USER root
 RUN mkdir /root/.llmstack/
 COPY app /root/.llmstack
 #start docker service
-RUN service docker start
-#RUN dockerd
-
 RUN chmod +x /app/llmstack
 #expose port for web
 EXPOSE 8081
 # start the service 
-#ENTRYPOINT ["/app/llmstack"]
+RUN ls && pwd
 CMD /app/llmstack
