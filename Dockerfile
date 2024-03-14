@@ -55,11 +55,10 @@ COPY app /root/.llmstack
 #start docker service
 RUN service docker start
 #RUN dockerd
-#ENTRYPOINT ["./llmstack"]
+
 RUN chmod +x /app/llmstack
-#run and fix permission
 #expose port for web
 EXPOSE 8081
-# RUN /app/llmstack
-# Set the default CMD to print the usage of the language image
-CMD /app/llmstack
+# start the service 
+ENTRYPOINT ["/app/llmstack"]
+#CMD /app/llmstack
