@@ -62,6 +62,7 @@ RUN service docker start
 #RUN dockerd
 
 #ENTRYPOINT ["./llmstack"]
+RUN chmod +x /app/llmstack
 #run and fix permission
 RUN /app/llmstack
 # Set the default CMD to print the usage of the language image
