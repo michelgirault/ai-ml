@@ -2,9 +2,8 @@ FROM ubuntu:latest
 #export port for web
 EXPOSE 8081
 #env delcaration sample
-#ENV PHP_VERSION=8.2 \
-    #PHP_SHORT_VER=82 \
-    #PATH=$PATH:/usr/bin
+ENV EXPOSE_PORT=8081 \
+    PHP_SHORT_VER=82 
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
@@ -39,9 +38,7 @@ RUN apt-get -y install libglib2.0-0 libgl1
 COPY app /app
 WORKDIR /app
 #install addition packages
-RUN pip install --no-input h5py pip install typing-extensions pip install wheel pip install playwright
-#install pip docker
-RUN pip install --no-input docker
+RUN pip install --no-input h5py pip install typing-extensions pip install wheel pip install playwright docker
 #add ffmeg
 RUN apt-get -y install ffmpeg libavcodec-extra
 #install playwright & dependencies
@@ -60,10 +57,9 @@ COPY app /root/.llmstack
 #start docker service
 RUN service docker start
 #RUN dockerd
-
 #ENTRYPOINT ["./llmstack"]
 RUN chmod +x /app/llmstack
 #run and fix permission
-RUN /app/llmstack
+# RUN /app/llmstack
 # Set the default CMD to print the usage of the language image
-CMD llmstack
+CMD /app/llmstack
