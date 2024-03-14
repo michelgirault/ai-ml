@@ -66,4 +66,4 @@ RUN chmod +x /app/llmstack
 #run and fix permission
 RUN /app/llmstack
 # Set the default CMD to print the usage of the language image
-CMD ./llmstack
+CMD llmstack
