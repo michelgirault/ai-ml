@@ -1,5 +1,5 @@
 #!/bin/bash
+chmod +x /app/llmstack
 service docker start
 dockerd&
-llmstack
 exec "$@"

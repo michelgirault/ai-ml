@@ -1,4 +1,10 @@
 FROM ubuntu:latest
+#export port for web
+EXPOSE 8081
+#env delcaration sample
+#ENV PHP_VERSION=8.2 \
+    #PHP_SHORT_VER=82 \
+    #PATH=$PATH:/usr/bin
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
@@ -54,8 +60,9 @@ COPY app /root/.llmstack
 #start docker service
 RUN service docker start
 #RUN dockerd
-#export port for web
-EXPOSE 8081
+
 #ENTRYPOINT ["./llmstack"]
+#run and fix permission
+RUN /app/llmstack
 # Set the default CMD to print the usage of the language image
 CMD ./llmstack
