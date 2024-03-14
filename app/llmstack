@@ -5,4 +5,3 @@ set -e
 chmod +x /app/llmstack
 service docker start
 #dockerd&
-done
