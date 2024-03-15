@@ -1,12 +1,12 @@
 FROM ubuntu:latest
 #env delcaration sample
-ENV EXPOSE_PORT=8081 \
+ENV EXPOSE_PORT=$EXPOSE_PORT \
     PHP_SHORT_VER=82 
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
 #install git
-RUN apt -y install git wget libdevmapper-dev iptables systemctl
+RUN apt -y install git wget libdevmapper-dev iptables systemctl libglib2.0-0 libgl1
 #install python and pip
 RUN apt -y install python3 python3-pip
 #update pip
@@ -29,12 +29,7 @@ RUN systemctl enable containerd.service
 #install ml and ai packages
 RUN pip install --no-input keras
 RUN pip install --no-input --ignore-installed flask
-#install fix dependcies
-RUN apt-get -y update 
-RUN apt-get -y install libglib2.0-0 libgl1
-#copy folder with script
-COPY app /app
-WORKDIR /app
+
 #install addition packages
 RUN pip install --no-input h5py pip install typing-extensions pip install wheel pip install playwright docker
 #add ffmeg
@@ -47,6 +42,9 @@ RUN pip install --no-input llmstack
 #last update and upgrade
 RUN apt -y update
 RUN apt -y upgrade
+#copy folder with script
+COPY app /app
+WORKDIR /app
 #switch to root user to execute the script
 USER root
 #fix permission
@@ -55,6 +53,6 @@ COPY app /root/.llmstack
 #start docker service
 RUN chmod +x /app/llmstack
 #expose port for web
-EXPOSE 8081
+EXPOSE $EXPOSE_PORT
 # start the service 
 CMD /app/llmstack
