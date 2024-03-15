@@ -57,5 +57,4 @@ RUN chmod +x /app/llmstack
 #expose port for web
 EXPOSE 8081
 # start the service 
-RUN ls && pwd
-CMD bash /app/llmstack
+CMD /app/llmstack
