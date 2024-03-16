@@ -55,4 +55,5 @@ RUN chmod +x /app/llmstack
 #expose port for web
 EXPOSE $EXPOSE_PORT
 # start the service 
-CMD /app/llmstack
+ENTRYPOINT ["./llmstack "] # must be JSON-array form
+CMD /app/llmstack   
