@@ -1,7 +1,4 @@
 FROM ubuntu:latest
-#env delcaration sample
-ENV EXPOSE_PORT=$EXPOSE_PORT \
-    PHP_SHORT_VER=82 
 #update packages
 RUN apt -y update
 RUN apt -y upgrade
@@ -53,7 +50,6 @@ COPY app /root/.llmstack
 #start docker service
 RUN chmod +x /app/llmstack
 #expose port for web
-EXPOSE $EXPOSE_PORT
-# start the service 
-ENTRYPOINT ["/bin/bash","./llmstack"] # must be JSON-array form
-# CMD /app/llmstack   
+EXPOSE 8081
+# start script to run docker service and llmstack
+ENTRYPOINT ["/bin/bash","./llmstack"]
