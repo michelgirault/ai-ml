@@ -50,6 +50,6 @@ COPY app /root/.llmstack
 #start docker service
 RUN chmod +x /app/llmstack
 #expose port for web
-EXPOSE 8080
+EXPOSE 8081
 # start script to run docker service and llmstack
 ENTRYPOINT ["/bin/bash","./llmstack"]
