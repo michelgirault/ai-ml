@@ -1,6 +1,8 @@
 #!/bin/bash
-set -e
+set -m
 #printf "true" | service docker start
 #true | service docker start
-dockerd &
+/usr/bin/dockerd &
+send "\n"
 llmstack
+fg %1
