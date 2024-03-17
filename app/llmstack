@@ -3,6 +3,6 @@ set -m
 #printf "true" | service docker start
 #true | service docker start
 /usr/bin/dockerd &
-send "\n"
+#send "\n"
 llmstack
-fg %1
+exec "$@"
