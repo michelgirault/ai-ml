@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
 #printf "true" | service docker start
-true | service docker start
+#true | service docker start
+dockerd &
 llmstack
