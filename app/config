@@ -27,7 +27,7 @@ admin_email = "michel@creapics.net"
 admin_password = "promptly"
 
 [llmstack-runner]
-host = "localhost"
+host = "localhostt"
 port = 50051
 wss_port = 50052
 playwright_port = 50053
