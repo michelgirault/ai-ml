@@ -32,4 +32,4 @@ port = 50051
 wss_port = 50052
 playwright_port = 50053
 rq_redis_port = 50379
-rq_redis_host = "localhost"
+rq_redis_host = "localhostt"
