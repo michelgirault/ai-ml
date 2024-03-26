@@ -2,7 +2,7 @@ generatedfiles_root = "./generatedfiles"
 use_remote_job_queue = true
 
 [llmstack]
-llmstack_port = 0:8081
+llmstack_port = 8081
 default_openai_api_key = ""
 default_dreamstudio_api_key = ""
 default_azure_openai_api_key = ""
