@@ -1,8 +1,0 @@
-#!/bin/bash
-set -m
-#printf "true" | service docker start
-#true | service docker start
-/usr/bin/dockerd &
-#send "\n"
-llmstack
-exec "$@"
